@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="640.0" prefWidth="709.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="Controller.Admin.CreateAccountsController">
+   <children>
+      <AnchorPane layoutX="209.0" layoutY="31.0" prefHeight="572.0" prefWidth="488.0" style="-fx-background-color: white; -fx-background-radius: 40px;">
+         <children>
+            <Label layoutX="107.0" layoutY="14.0" prefHeight="46.0" prefWidth="235.0" text="Create New Accounts" textFill="#3f4c6f">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Label>
+            <Label layoutX="72.0" layoutY="120.0" prefHeight="46.0" prefWidth="173.0" text="Accounts number">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="72.0" layoutY="166.0" prefHeight="46.0" prefWidth="143.0" text="UserName:">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="AccountsNumTF" layoutX="253.0" layoutY="127.0" styleClass="textField" stylesheets="@../../css/admin.css" />
+            <TextField fx:id="UserNameTF" layoutX="253.0" layoutY="173.0" styleClass="textField" stylesheets="@../../css/admin.css" />
+            <Button fx:id="SaveAccountBtn" layoutX="107.0" layoutY="502.0" mnemonicParsing="false" onAction="#SaveAccounts" prefHeight="25.0" prefWidth="119.0" styleClass="saveButton" stylesheets="@../../css/admin.css" text="Save" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="cancelBtn" layoutX="235.0" layoutY="502.0" mnemonicParsing="false" onAction="#cancelCreation" prefHeight="25.0" prefWidth="119.0" styleClass="cancelButton" stylesheets="@../../css/admin.css" text="Cancel" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Label layoutX="72.0" layoutY="319.0" prefHeight="46.0" prefWidth="143.0" text="Creation Date:">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="72.0" layoutY="217.0" prefHeight="46.0" prefWidth="143.0" text="Currency:">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="72.0" layoutY="270.0" prefHeight="46.0" prefWidth="143.0" text="Balance:">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="CreationDateTF" layoutX="253.0" layoutY="319.0" styleClass="textField" stylesheets="@../../css/admin.css" />
+            <TextField fx:id="CurrencyTF" layoutX="253.0" layoutY="223.0" styleClass="textField" stylesheets="@../../css/admin.css" />
+            <TextField fx:id="BalanceTF" layoutX="253.0" layoutY="270.0" styleClass="textField" stylesheets="@../../css/admin.css" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-4.0" prefHeight="640.0" prefWidth="201.0" styleClass="sidePar" stylesheets="@../../css/admin.css">
+         <children>
+            <Label alignment="CENTER" layoutX="23.0" layoutY="35.0" prefHeight="42.0" prefWidth="162.0" text="Control Panel" textFill="#c6e8ff">
+               <effect>
+                  <Glow level="0.33" />
+               </effect>
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="usersManagmentPageBtn" alignment="BASELINE_LEFT" layoutY="186.0" mnemonicParsing="false" onAction="#showUsersManagmentPage" prefHeight="49.0" prefWidth="207.0" styleClass="sideParItem" stylesheets="@../../css/admin.css" text="Users">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
+            <Button fx:id="accountsPageBtn" alignment="BASELINE_LEFT" layoutY="235.0" mnemonicParsing="false" onAction="#showAccountsPage" prefHeight="49.0" prefWidth="207.0" styleClass="sideParItemActive" stylesheets="@../../css/admin.css" text="Accounts">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
+            <Button fx:id="operationsPageBtn" alignment="BASELINE_LEFT" layoutY="284.0" mnemonicParsing="false" onAction="#showOperationsPage" prefHeight="49.0" prefWidth="207.0" styleClass="sideParItem" stylesheets="@../../css/admin.css" text="Operations">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
+            <Label alignment="CENTER" layoutX="23.0" layoutY="14.0" prefHeight="42.0" prefWidth="162.0" text="Bank System" textFill="WHITE">
+               <effect>
+                  <Glow level="0.33" />
+               </effect>
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" color="#000000b2" height="28.29" radius="36.225" width="118.61" />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>
